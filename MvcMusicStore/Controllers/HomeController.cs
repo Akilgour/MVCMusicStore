@@ -12,11 +12,11 @@ namespace MvcMusicStore.Controllers
         // GET: /Home/
         //http://www.asp.net/mvc/tutorials/mvc-music-store/mvc-music-store-part-2
 
-        public string Index()
+        //
+        // GET: /Home/
+        public ActionResult Index()
         {
-         //        return View();
-            return "Hello from Home";
+            return View();
         }
-
     }
 }
