@@ -14,9 +14,16 @@ namespace MvcMusicStore
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+        //    System.Data.Entity.Database.SetInitializer(
+        //new MvcMusicStore.Models.SampleData());
+        //    AreaRegistration.RegisterAllAreas();
 
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
+        //    WebApiConfig.Register(GlobalConfiguration.Configuration);
+        //    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+        //    RouteConfig.RegisterRoutes(RouteTable.Routes);
+            System.Data.Entity.Database.SetInitializer(
+        new MvcMusicStore.Models.SampleData());
+            AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
